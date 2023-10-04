@@ -1,0 +1,15 @@
+{
+  "name": "sayna-jstscanvas-panther-102023",
+  "version": "1.0.0",
+  "description": "This is an evaluation for the \"Discovery 101\" parkous in the SAYNA.SPACE platform.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass styles/main.scss styles/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}

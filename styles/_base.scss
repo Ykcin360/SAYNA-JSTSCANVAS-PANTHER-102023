@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
   margin: 0;
   font-family: $cantarell;
-  font-size: 16px;
+  font-size: 15px;
   color: $white;
   outline: none;
   box-sizing: border-box;
@@ -16,7 +16,6 @@
 body{
   background: #11213F;
   background: $gradient-bg-1;
-  font-size: 18px;
   box-sizing: border-box;
   overflow-x: hidden;
   z-index: 0;
@@ -25,7 +24,9 @@ body{
 }
 
 h1, h2, h3 {
-  line-height: 1;
+  // line-height: 1;
+  text-transform: lowercase;
+  font-weight: 500;
 }
 
 h2, h3, p{
@@ -35,5 +36,28 @@ h2, h3, p{
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
+// Custom Scroll-bar
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 10px 0 10px $secondary-dark; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gradient-bg-2;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary-dark; 
+}

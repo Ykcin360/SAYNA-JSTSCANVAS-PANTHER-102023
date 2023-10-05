@@ -11,18 +11,21 @@
 }
 
 .title-1{
-  font-size: 68px;
+  font-size: 58px;
   font-family: $panthera;
+  color: $secondary-dark;
 }
 
 .title-2{
-  font-size: 43px;
-  font-family: $wakanda;
+  font-size: 30px;
+  font-family: $beyno;
+  color: $secondary-dark;
 }
 
-.subtittle{
-  font-size: 32px;
+.subtitle{
+  font-size: 22px;
   font-family: $beyno;
+  color: $secondary-dark;
 }
 
 .input{
@@ -47,11 +50,19 @@
 .flexible{
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1em;
 }
 
 .container{
-  padding: 0 1em;
-  border: 1px solid red;
+  padding: 0 5em;
+  // border: 1px solid red;
 }
 
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.see-more{
+  text-decoration: underline;
+}

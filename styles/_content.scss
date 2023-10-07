@@ -4,7 +4,7 @@
   column-gap: 0.8em;
   top: -100%;
   transition: top 1s ease;
-  z-index: 5;
+  z-index: 999;
 }
 
 .lines.show-lines {
@@ -64,17 +64,35 @@ nav .menu{
 
 main{
   margin-block: 1em;
+  overflow: hidden;
 }
 
 main #hero{
   padding-block: 0.5em;
-  background: url(../assets/1_Landing_page/Pantherhome1..png) no-repeat;
-  background-position: 100% 50%;
-  background-size: 60%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+main #hero.landing{
+  background: url(../assets/1_Landing_page/Pantherhome1..png) no-repeat;
+  background-position: 100% 50%;
+  background-size: 60%;
+}
+
+main #hero.wakanda{
+  background: none;
+  // background: url(../assets/2_Wakanda_page/Pantherwakanda1.png) no-repeat;
+  // background-position: center;
+  // background-size: 100%;
+  // min-height: 90vh;
+}
+
+main .wakanda-bg{
+  position: absolute;
+  transform: scale(1.3);
+  z-index: -1;
 }
 
 main #hero p{
@@ -82,13 +100,20 @@ main #hero p{
 }
 
 main #hero :is(h1, h2) {
-  width: 450px;
+  max-width: 550px;
   transition: transform 0.5s ease;
 }
 
 main #hero :is(h1, h2):hover{
   transform: scale(1.05) translateX(0.5em);
   cursor: default;
+}
+
+main #hero h1.wakanda{
+  font-family: $panthera;
+}
+main #hero h2.wakanda{
+  font-family: $wakanda;
 }
 
 .swiper {
@@ -155,6 +180,11 @@ main #content{
   display: flex;
 }
 
+main #content.wakanda{
+  background: url(../assets/2_Wakanda_page/Pantherwakanda2.png) no-repeat top;
+  background-size: contain;
+}
+
 main #content > div {
   flex-grow: 1;
   display: flex;
@@ -164,6 +194,11 @@ main #content > div {
   padding-inline: 1em !important;
 }
 
+main #content > div.wakanda{
+  margin-top: 20vh;
+  
+}
+
 main #content > div .paragraph{
   min-height: 50vh;
   flex-basis:  600px;
@@ -171,17 +206,48 @@ main #content > div .paragraph{
   row-gap: 2em;
 }
 
+main #content > div.wakanda .paragraph-1{
+  flex-grow: 1;
+  flex-basis: 40vw;
+}
+
+main #content > div.wakanda .paragraph-1 .youtube-video{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  background-image: $gradient-bg-2;
+}
+
+main #content > div.wakanda .paragraph-1 .youtube-video iframe{
+  min-height: 300px;
+  flex-grow: 1;
+}
+
+main #content > div.wakanda .paragraph-2{
+  flex-grow: 1;
+  flex-basis: 35vw;
+}
+
 main #content > div .paragraph span {
   color: $white;
 }
 
-main #content > div .paragraph h2{
+main #content > div :is(.paragraph, .paragraph-1, .paragraph-2) h2{
   transition: transform 0.5s ease;
 }
 
-main #content > div .paragraph h2:hover{
+main #content > div :is(.paragraph, .paragraph-1, .paragraph-2) h2:hover{
   transform: scale(1.1) translateX(1em);
   cursor: default;
+}
+
+main #content > div.wakanda .military-illustration{
+  background: url(../assets/2_Wakanda_page/Pantherwakanda3.png) no-repeat center;
+  background-size: contain;
+  margin-block: 3em;
+  transform: scale(1.8);
+  width: 100%;
+  min-height: 200px;
 }
 
 main #content div .aside{
@@ -246,7 +312,6 @@ main .aside .aside-illustration{
   background: url(../assets/1_Landing_page/Pantherhome4.png) no-repeat center;
   background-size: cover;
   align-items: center;
-  z-index: 4;
 }
 
 #contact .card-contact{

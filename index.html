@@ -10,6 +10,16 @@
 </head>
 
 <body>
+  <!-- Contact Modal -->
+  <div class="modal modal-contact">
+    <div class="zoom-in">
+      <h1 class="modal-title">Merci de nous avoir contacté</h1>
+      <p class="modal-text">Votre message a été envoyé avec succès vers les responsables du Wakanda cher ami.</p>
+      <button class="modal-btn">OK</button>
+    </div>
+  </div>
+  <!-- Cursor Following -->
+  <img class="hidden" id="wakandaMouse" src="assets/logo_souris_BP2_blanc.png" alt="">
   <!-- Side social icons -->
   <div class="lines">
     <span></span>
@@ -22,30 +32,30 @@
     <a href="#"><img src="assets/icon_tik_tok.png" alt=""></a>
   </div>
   <!-- Navigation menu -->
-  <nav class="container flexible">
+  <nav class="container flexible hidden">
     <div class="logo">
       <a href="index.html">
         <img src="assets/icon_SaynaXMarvel.png" alt="logo">
       </a>
     </div>
     <ul class="menu flexible centered">
-      <li><a class="subtitle" href="#">accueil</a></li>
-      <li><a class="subtitle" href="#">wankanda</a></li>
-      <li><a class="subtitle" href="#">enigme</a></li>
+      <li><a class="subtitle home-link" href="index.html">accueil</a></li>
+      <li><a class="subtitle wakanda-link" href="wakanda.html">wakanda</a></li>
+      <li><a class="subtitle enigme-link" href="enigme.html">enigme</a></li>
     </ul>
   </nav>
   <main class="container flexible">
     <!-- Hero section -->
-    <section id="hero">
-      <h1 class="title-1">Black Panther</h1>
+    <section id="hero" class="hidden from-left">
+      <h1 class="title-1 a">Black Panther</h1>
       <h2 class="title-2">Wakanda forever</h2>
       <p>En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend
         hommage aux cultures africaine et afro américaine. On y évoque le racisme, la
         colonisation et les violences contre les afro américains.
         Ce film marque tout une génération, c’est 100% africain et c’est parfait .</p>
-      <a class="see-more" href="#">Voir plus ></a>
+      <a class="see-more" href="#prince-birth">Voir plus ></a>
     </section>
-    <section id="swiper" class="swiper mySwiper">
+    <section id="swiper" class="swiper mySwiper hidden from-left">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="assets/1_Landing_page/Pantherhome_slider_1.png">
@@ -174,13 +184,207 @@
 
       </div>
       <div class="swiper-button-next"></div>
-      <!-- <div class="swiper-button-prev"></div> -->
-      <!-- <div class="swiper-pagination"></div> -->
+    </section>
+    <section id="content" class="hidden">
+      <div class="container flexible">
+        <div class="paragraph flexible">
+          <div id="prince-birth" class="container from-left">
+            <h2 class="subtitle">Naissance d’un prince</h2>
+            <p>T'Challa est né au Wakanda, un pays isolationniste situé en Afrique, du monarque régnant T'Chaka et de sa
+              femme Ramonda. Il
+              a finalement eu une sœur cadette nommée Shuri. S'entraînant toute sa vie pour prendre la place de son père
+              en tant que
+              prochain Black Panther, T'Challa est devenu un homme avec un esprit très actif et malgré tous les efforts
+              de T'Chaka, une
+              grande aversion pour la politique. <br><br>
+              T'Challa est poli, respectueux et très attentionné envers les gens qu'il côtoie et qu'il considère comme
+              ses amis. Il est démontré
+              qu'il a un grand respect envers les autres, en particulier envers son père, T'Chaka. Il honore la
+              tradition et les principes du
+              Wakanda et est prêt à agir chaque fois que cela est nécessaire. À la mort de son père, il était disposé et
+              prêt à prendre la place
+              qui lui revenait en tant que roi du Wakanda. Bien qu'il ne semble pas privilégier les combats, il a très
+              vite tenté de venger la mort
+              de son père. Combattant honorable, T'Challa respecte ses adversaires et est prêt à épargner la vie de ses
+              ennemis. Cela étant
+              dit, il n'est pas opposé à tuer ses adversaires dans un combat et n'essaie pas toujours d'éviter les
+              mesures mortelles de les
+              neutraliser.<br><br>
+              <span style="font-size: 0.8em;">
+                « Toute ma vie, je l'ai regardé porter le costume. Il pouvait soulever un homme à une seule main et
+                courir
+                aussi vite qu'un
+                zèbre. Puis il m'a dit qu'il était trop vieux pour continuer à endosser le rôle de Black Panther; il me
+                l'a alors passé afin de
+                simplement rester roi.
+                <br>- Il me disait qu'il ne pouvait plus rentrer dans le costume. »
+                <br>-T'Challa et Zuri
+              </span>
+            </p>
+          </div>
+          <div id="avenger" class="container from-left">
+            <h2 class="subtitle">Un heros vengeur</h2>
+            <p><span style="font-size: 0.8em;">
+                « La mort, dans notre culture, n'est pas la fin. Pour nous, c'est plutôt un point de départ. Le défunt
+                n'a qu'à tendre les
+                bras; et Bast et Sekhmet le guident jusqu'à l'entrée de la grande vallée où il résidera à tout jamais.
+                <br>- C'est une vision très pacifique.
+                <br>- À l'image de mon père. Je ne suis pas mon père. »
+                <br>- T'Challa et Natasha Romanoff
+              </span><br><br>
+              Suite à la mort de son père dans l'attentat à la bombe orchestré par Helmut Zemo, terroriste souhaitant la
+              chute des
+              Avengers, T'Challa avait entrepris de tuer le Soldat de l'hiver, qui était largement considéré (à tort)
+              comme responsable de
+              l'attaque. Au cours de sa tentative de trouver le Soldat de l'hiver, Black Panther avait rejoint une
+              guerre civile entre les
+              Avengers, où il s'était rangé du côté d'Iron Man. T’Challa est alors animé par son désir de vengeance de
+              la mort de son père,
+              ce qu’il partage avec Iron Man, tous deux victimes de l’assassinat de leurs parents. <br><br>
+              Cependant, Black Panther apprend finalement en capturant Zemo, que c’était lui le seul responsable de la
+              mort de son
+              père, et que le Soldat de l’hiver n’était alors qu’une arme entre les mains de Zemo. Se rendant compte de
+              la supercherie
+              ainsi que de la voie sombre de la vengeance, T’Challa se promet de ne plus permettre aux désirs de
+              vengeance de le
+              consumer à nouveau.<br><br>
+              <span style="font-size: 0.8em;">
+                « Quelle est la meilleure façon de protéger le Wakanda ? Je dois devenir un grand roi baba, comme tu
+                l'étais.
+                <br>- Tu devras lutter. Pour ça, il te faudra t'entourer de personnes de confiance. Tu es un homme bon,
+                avec
+                un grand
+                coeur. C'est difficile pour un homme bon d'être roi. »
+                <br>- T'Challa et T'Chaka
+              </span>
+            </p>
+          </div>
+          <div id="protector" class="container from-left">
+            <h2 class="subtitle">Un heros PROTECTEUR ET JUSTICIER</h2>
+            <p>
+              <span style="font-size: 0.8em;">
+                « Tu as eu tort ! Vous avez tous eu tort ! Il ne fallait pas tourner le dos au reste du monde. Nous
+                avons laissé la peur
+                d’être découverts nous empêcher de faire ce qui était juste. Non père, non je ne peux pas rester ici
+                avec toi. Tant qu’il
+                sera sur le trône, je ne saurai trouver le repos. C’est un monstre et c’est nous qui l’avons créé. Il
+                faut que je reprenne
+                le pouvoir, il le faut ! Il faut que je corrige ces injustices. »
+                <br>- T'Challa à T'Chaka
+              </span><br><br>
+              Il y a des siècles, alors que cinq tribus africaines se disputaient une météorite composée de vibranium
+              métallique
+              extraterrestre, un chaman guerrier Bashenga, guidé par la déesse panthère Bast, ingère une herbe en forme
+              de cœur
+              affectée par le métal et acquiert des capacités surhumaines. Devenu le premier Black Panther , il unit
+              toutes les tribus sauf
+              la tribu des Jabari, et forme la nation du Wakanda. Au fil du temps, les Wakandains utilisent le vibranium
+              pour développer
+              une technologie de pointe tout en s'isolant du reste du monde et en se faisant passer pour un pays du
+              tiers monde.<br><br>
+              Cependant, Black Panther apprend finalement en capturant Zemo, que c’était lui le seul responsable de la
+              mort de son
+              père, et que le Soldat de l’hiver n’était alors qu’une arme entre les mains de Zemo. Se rendant compte de
+              la supercherie
+              ainsi que de la voie sombre de la vengeance, T’Challa se promet de ne plus permettre aux désirs de
+              vengeance de le
+              consumer à nouveau.
+              Après les événements qui se sont déroulés dans Captain America : Civil War , T'Challa revient chez lui
+              prendre sa place sur
+              le trône du Wakanda, une nation africaine technologiquement très avancée. Néanmoins, T’Challa se retrouve
+              rapidement
+              mis au défi pour obtenir le trône. Une fois couronné il espère accomplir une tâche que son père n’aura pas
+              pu mener à son
+              terme : capturer Ulysse Klaw un voleur qui a volé du vibranium. Cette traque l’amènera à faire équipe avec
+              l’agent de la CIA
+              Everett Ross et les membres de la Dora Milaje, les forces spéciales du Wakanda. Il découvira également un
+              secret enfoui
+              sur sa famille qui lui fera prendre conscience de la nécessité de s’ouvrir au monde exterieur afin de ne
+              pas répeter les
+              erreurs de son père.
+            </p>
+          </div>
+        </div>
+        <div class="aside container flexible">
+          <div class="card flexible">
+            <img src="assets/1_Landing_page/Pantherhome3.png" alt="" srcset="">
+            <h1 class="card-subtitle">T'Challa</h1>
+            <div class="card-btn flexible centered">
+              <button class="btn-3">Black Panther</button>
+              <button class="btn-3">Roi du Wakanda</button>
+              <button class="btn-3">En vie</button>
+            </div>
+            <div class="card-info">
+              <ul>
+                <li>Acteur : <span>Chadwick Boseman</span></li>
+                <li>Apparition : <span>Captain America Civil War (2016)</span></li>
+                <li>Éspèce : <span>Humain</span></li>
+                <li>Nationalité : <span>Wakandais</span></li>
+                <li>Sexe : <span>Homme</span></li>
+                <li>Décès : <span>31 mai 2018</span> (victime du Snap ; ressuscité par Hulk
+                  en 2023) <span>(2016)</span></li>
+                <li>Réalité : <span>Terre-199999</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="aside-illustration zoom-in"></div>
+        </div>
+      </div>
     </section>
   </main>
+  <div id="contact" class="container flexible hidden">
+    <div class="card-contact">
+      <div class="card-contact-title">
+        <p class="text-center">Besoin de l’intervention du Wakanda ?</p>
+        <h2 class="card-subtitle">Contactez nous !</h2>
+      </div>
+      <div class="card-contact-form flexible">
+        <input class="input" type="text" placeholder="Nom">
+        <input class="input" type="email" placeholder="Email">
+        <textarea class="textarea" name="message" id="message" cols="30" rows="10"></textarea>
+        <button class="btn-2 card-contact-btn">ENVOYER</button>
+      </div>
+    </div>
+  </div>
+  <footer class="container flexible hidden">
+    <div class="footer-illustration container flexible centered from-left">
+      <img src="assets/icon_SaynaXMarvel.png" alt="">
+    </div>
+    <div class="footer-content container flexible from-left">
+      <div class="container flexible" style="padding-inline: 0.5em !important;">
+        <div class="left-side container flexible">
+          <h2 class="footer-subtitle">PAGES</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Wakanda</a></li>
+            <li><a href="#">Énigme</a></li>
+          </ul>
+        </div>
+        <div class="right-side container flexible">
+          <h2 class="footer-subtitle">RETROUVEZ NOUS</h2>
+          <ul class="flexible">
+            <li><a href="#"><img src="assets/icon_facebook_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_instagram_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_twitter_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_ti_tok_footer.png" alt="" srcset=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-txt flexible centered">
+        <p>2022 Tous droits réservés</p>
+        <ul class="flexible centered">
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Conditions d’utilisation</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="scripts/animation.js" defer></script>
+  <script src="scripts/app.js"></script>
   <script src="scripts/swiper.js"></script>
+  <script src="scripts/cursor.js" defer></script>
 </body>
 
 </html>

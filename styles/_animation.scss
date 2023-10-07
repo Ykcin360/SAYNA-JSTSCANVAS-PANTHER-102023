@@ -1,0 +1,52 @@
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.to-right {
+  transform: translateX(0);
+}
+
+.from-right {
+  transform: translateX(20%);
+  filter: blur(5px);
+  transition: all 0.5s;
+}
+
+.to-left {
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.zoom-in{
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.zoom{
+  transform: scale(1);
+}
+
+.from-top{
+  transform: translateY(-500px);
+}
+
+.to-self{
+  transform: translateY(500px);
+  transition: transform 0.5s ease;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden, .to-right, .to-right {
+    transition: none;
+  }
+}

@@ -13,12 +13,37 @@
     max-width: 100% !important;
   }
 
+  main #hero {
+    background-position: 100% 0% !important;
+  background-size: 90% !important;
+  }
+
   .swiper-slide {
     flex-direction: column !important;
   }
 
   .swiper-slide .info{
     padding: 1em !important;
+  }
+
+  #contact .card-contact{
+    border-radius: 50px !important;
+    min-width: 500px !important;
+  }
+
+  #contact .card-contact .card-contact-form{
+    margin-inline: 6em !important;
+    width: 200px;
+  }
+
+  footer .footer-content :is(.left-side, .right-side){
+    text-align: center;
+  }
+
+  footer .footer-content .left-side ul{
+    display: flex;
+    column-gap: 2em;
+    justify-content: center;
   }
 }
 
@@ -45,11 +70,43 @@
     text-align: center;
   }
 
+  main #hero {
+    background-position: center;
+  background-size: 100% !important;
+  }
+
   .swiper-slide {
     flex-direction: column !important;
   }
 
   .swiper-slide .info{
     padding: 1em !important;
+  }
+
+  #contact .card-contact{
+    border-radius: 50px !important;
+    min-width: 400px !important;
+  }
+
+  #contact .card-contact .card-contact-form{
+    margin-inline: 3em !important;
+    width: 200px;
+  }
+
+  footer .footer-content :is(.left-side, .right-side){
+    text-align: center;
+  }
+
+  footer .footer-content > div{
+    flex-direction: column;
+  }
+  footer .footer-content .left-side{
+    width: 100% !important;
+  }
+
+  footer .footer-content .left-side ul{
+    display: flex;
+    column-gap: 2em;
+    justify-content: center;
   }
 }

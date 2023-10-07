@@ -23,6 +23,17 @@ body{
   padding: 0 1em;
 }
 
+#wakandaMouse{
+  position:absolute;
+  left: 50%;
+  display:block;
+  width: 2rem;
+  z-index:10;
+  opacity: 0.9;
+  filter: grayscale(100) drop-shadow(0 0 0.5rem #fff);
+  transition: all 0.2s ease-in;
+}
+
 h1, h2, h3 {
   // line-height: 1;
   text-transform: lowercase;
@@ -37,6 +48,15 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+footer{
+  min-height: 80vh;
+  background-image: $gradient-bg-3;
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 // Custom Scroll-bar

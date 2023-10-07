@@ -1,0 +1,58 @@
+.modal{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.451);
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 3;
+  transition: all 0.8s;
+}
+
+.modal > div{
+  background-image: $gradient-bg-2;
+  z-index: 4;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  min-height: 50vh;
+  width: 50vw;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4rem;
+  border-radius: 20px;
+}
+
+.modal .modal-title {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: $beyno;
+  text-align: center;
+}
+
+.modal .modal-text {
+  width: 70%;
+  height: 25%;
+  text-align: center;
+}
+
+.modal .modal-btn {
+  text-decoration: none;
+  border-radius: 20px;
+  background: $white;
+  padding: 1rem 1.5rem;
+  font-family: $cantarell;
+  text-transform: uppercase;
+  padding-inline: 5rem;
+  border: none;
+}
+
+.modal .modal-btn:hover {
+  background: $primary-light;
+  cursor: pointer;
+}

@@ -31,6 +31,7 @@
 }
 
 .socials a:hover{
+  filter: drop-shadow(0px 0px 5px $primary);
   opacity: 0.5;
   transition: opacity 0.5s;
 }
@@ -397,6 +398,10 @@ footer .footer-content .right-side ul{
   justify-content: space-between;
 }
 
+footer .footer-content .right-side ul li:hover{
+  filter: drop-shadow(0px 0px 5px $primary);
+}
+
 footer .footer-content .right-side img{
   width: 30px;
 }
@@ -412,4 +417,8 @@ footer .footer-content .footer-txt ul{
 footer .footer-content .footer-txt li{
   margin-left: 1em;
   list-style-type: disc;
+}
+
+footer .footer-content :is(.footer-txt, .left-side ul) li:hover{
+  text-decoration: underline;
 }

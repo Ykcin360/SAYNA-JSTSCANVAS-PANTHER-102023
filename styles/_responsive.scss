@@ -9,6 +9,10 @@
     justify-content: center;
   }
 
+  main .wakanda-bg{
+    top: 10em;
+  }
+
   main #hero p{
     max-width: 100% !important;
   }
@@ -64,6 +68,10 @@
   nav .logo{
     display: flex;
     justify-content: center;
+  }
+
+  main .wakanda-bg{
+    top: 10em;
   }
 
   main #hero :not(p){

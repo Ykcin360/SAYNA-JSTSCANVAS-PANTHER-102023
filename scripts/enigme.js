@@ -34,10 +34,21 @@ const enigmeContent = document.querySelector(".enigme-content");
 const enigmeSubHint = document.querySelector(".enigme-sub-hint");
 const enigmeButton = document.querySelector(".enigme-btn");
 const enigmeHint = document.querySelector(".enigme-hint");
+const userResponse = document.querySelector(".user-response");
+const enigmeModal = document.querySelector(".modal-enigme");
+const enigmeTitleModal = document.querySelector(".modal-title-enigme");
+const enigmeModalButton = document.querySelector(".modal-btn-enigme");
+const soonBox = document.querySelector(".soon");
+const tryCount = document.querySelector(".try");
 
+const targetDate = new Date("2023-10-25T00:00:01").getTime();
 let enigmeAnswer;
-let number = 3;
+let number = 1;
+let score = 0;
+let enigmeTry = 10;
 let enigmeEnded = 0;
+
+tryCount.textContent = enigmeTry;
 
 // enigmeData contient les données JSON
 let hintText0 = enigmeData[0].hint;
@@ -49,27 +60,73 @@ letters = letters.map((letter) => letter.toLowerCase());
 if (!enigmeEnded) {
   switch (number) {
     case 1:
-      enigmeNumber.textContent = setEnigmeNumber(number);
       setEnigme();
       enigmeButton.addEventListener("click", function () {
-        console.log(enigmeAnswer);
+        if (checkAnswer(userResponse)) {
+          setEnigme();
+        } else {
+          decreaseTry();
+        }
       });
       break;
     case 2:
-      enigmeNumber.textContent = setEnigmeNumber(number);
       setEnigme();
+      enigmeButton.addEventListener("click", function () {
+        if (checkAnswer(userResponse)) {
+          setEnigme();
+        } else {
+          decreaseTry();
+        }
+      });
       break;
     case 3:
-      enigmeNumber.textContent = setEnigmeNumber(number);
       setEnigme();
+      enigmeButton.addEventListener("click", function () {
+        if (checkAnswer(userResponse)) {
+          endEnigme();
+        } else {
+          decreaseTry();
+        }
+      });
       break;
   }
-} else {
-  console.log("Fin de l'enigme");
+}
+
+const countdownInterval = setInterval(() => {
+  const now = new Date().getTime();
+  const timeRemaining = targetDate - now;
+
+  // Calcul des heures, minutes et secondes restantes
+  const hours = Math.floor(
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Mettez à jour l'élément HTML avec le temps restant
+  const countdownElement = document.querySelector(".count");
+  countdownElement.textContent = `${formatTime(hours)}:${formatTime(
+    minutes
+  )}:${formatTime(seconds)}`;
+
+  // Si le compte à rebours est terminé
+  if (timeRemaining <= 0) {
+    clearInterval(countdownInterval);
+    countdownElement.textContent = "00:00:00";
+    // Faites quelque chose lorsque le compte à rebours est terminé
+    // par exemple, redirigez l'utilisateur ou affichez un message
+    enigmeModalButton.textContent = "IT'S TIME";
+  }
+}, 1000);
+
+// Fonction pour formater le temps avec un zéro en cas de chiffre unique
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
 }
 
 // FUNCTIONS
 function fontToWakanda() {
+  enigmeHint.textContent = "";
   for (let i = 65; i <= 90; i++) {
     const letter = String.fromCharCode(i);
     const container = document.createElement("div");
@@ -90,6 +147,8 @@ function setEnigmeNumber(n) {
 }
 
 function setEnigme() {
+  enigmeNumber.textContent = setEnigmeNumber(number);
+
   // enigmeData contient les données JSON
   let state = enigmeData[number - 1].state;
   let enigme = enigmeData[number - 1].enigme;
@@ -105,9 +164,54 @@ function setEnigme() {
   if (number == 1) {
     enigmeContent.classList.add("font-wakanda");
     fontToWakanda();
-  } else if (number == 3) {
-    enigmeContent;
-  } else {
+  } else if (number == 2) {
+    enigmeContent.style.fontFamily = "cantarell";
+    enigmeContent.style.textTransform = "initial";
+    enigmeContent.style.letterSpacing = "0.1em";
+    enigmeContent.style.fontSize = "1em";
+    enigmeSubHint.style.textAlign = "center";
     enigmeHint.textContent = hint;
+    enigmeHint.style.textTransform = "initial";
+  } else if (number == 3) {
+    enigmeContent.style.wordSpacing = "2em";
+    enigmeSubHint.style.textAlign = "center";
+    enigmeHint.textContent = hint;
+  }
+}
+
+function checkAnswer(r) {
+  console.log(r.value);
+  if (r.value.toLowerCase() === enigmeAnswer.toLowerCase()) {
+    if (number == 3) {
+      endEnigme();
+    } else {
+      number++;
+    }
+    score++;
+    r.value = "";
+    return true;
+  }
+}
+
+function decreaseTry() {
+  userResponse.value = "";
+  enigmeTry--;
+  tryCount.textContent = enigmeTry;
+  if (enigmeTry <= 0) {
+    endEnigme();
+  }
+}
+
+function endEnigme() {
+  enigmeModal.style.display = "block";
+  if (enigmeTry > 0) {
+    enigmeTitleModal.textContent = "ton initiation est terminée !";
+    enigmeModalButton.textContent = "Revenir à l'accueil";
+    enigmeModalButton.href = "index.html";
+  } else {
+    enigmeTitleModal.textContent = "vous n'êtes pas encore prêt...";
+    enigmeModalButton.textContent = "Réessayer";
+    soonBox.style.display = "none";
+    enigmeModalButton.href = "enigme.html";
   }
 }

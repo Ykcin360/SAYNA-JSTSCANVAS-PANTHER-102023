@@ -10,12 +10,18 @@
 </head>
 
 <body>
-  <!-- Contact Modal -->
-  <div class="modal modal-contact">
+  <!-- Enigme Modal -->
+  <div class="modal modal-enigme">
     <div class="zoom-in">
-      <h1 class="modal-title">Merci de nous avoir contacté</h1>
-      <p class="modal-text">Votre message a été envoyé avec succès vers les responsables du Wakanda cher ami.</p>
-      <button class="modal-btn">OK</button>
+      <h1 class="modal-title modal-title-enigme">Merci de nous avoir contacté</h1>
+      <a href="#" class="modal-btn modal-btn-enigme">OK</a>
+      <div class="soon flexible">
+        <img src="assets/3_Page_Enigme/figma_logo.svg" alt="" srcset="">
+        <div class="countdown flexible">
+          <h2 class="title-3" style="margin-bottom: 0;">COMING SOON...</h2>
+          <p class="count" style="margin-bottom: 0;">00:00:40</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Cursor Following -->
@@ -68,18 +74,19 @@
       <div class="container flexible">
         <div class="paragraph-1 container flexible">
           <h2 class="subtitle">ENIGME NUMERO <span class="enigme-number"></span></h2>
+          <p class="title-1 enigme-try">Essaie restant: <span class="try"></span></p>
           <p class="enigme-state"></p>
           <p class="enigme-content"></p>
           <div class="enigme-input flexible">
             <label for=""></label>
-            <input class="input" type="text" placeholder="Réponse">
+            <input class="input user-response" type="text" placeholder="Réponse">
             <button class="btn-2 enigme-btn">ENVOYER</button>
           </div>
         </div>
         <div class="paragraph-2 container flexible">
           <div>
             <p class="enigme-sub-hint"></p>
-            <h2 class="enigme-hint flexible"></h2>
+            <h2 class="enigme-hint flexible zoom-in"></h2>
           </div>
         </div>
       </div>
@@ -121,7 +128,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="scripts/animation.js" defer></script>
-  <script src="scripts/modal.js"></script>
   <script src="scripts/underline.js"></script>
   <script src="scripts/swiper.js"></script>
   <script src="scripts/cursor.js" defer></script>

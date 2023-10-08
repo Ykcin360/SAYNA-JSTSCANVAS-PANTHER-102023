@@ -355,6 +355,10 @@ main .aside .aside-illustration{
   height: 400px;
 }
 
+main #content.enigme-box {
+  margin-bottom: 15em;
+}
+
 main #content.enigme-box .subtitle{
   font-size: 20px;
   text-decoration: underline;
@@ -391,6 +395,11 @@ main #content.enigme-box .paragraph-1 .enigme-input .enigme-btn{
   align-self: center;
   border: none;
   margin-top: 3em;
+  transition: transform 0.2s ease-out;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-input .enigme-btn:active{
+  transform: scale(0.8);
 }
 
 main #content.enigme-box .paragraph-2{
@@ -405,6 +414,17 @@ main #content.enigme-box .paragraph-2{
 
 main #content.enigme-box .subtitle:hover{
   transform: none !important;
+}
+
+.enigme-try {
+  font-size: 1em;
+}
+
+.enigme-try .try{
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $secondary-dark;
+  font-family: $panthera;
 }
 
 #contact{

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigme</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- Contact Modal -->
+  <div class="modal modal-contact">
+    <div class="zoom-in">
+      <h1 class="modal-title">Merci de nous avoir contacté</h1>
+      <p class="modal-text">Votre message a été envoyé avec succès vers les responsables du Wakanda cher ami.</p>
+      <button class="modal-btn">OK</button>
+    </div>
+  </div>
+  <!-- Cursor Following -->
+  <img class="hidden" id="wakandaMouse" src="assets/logo_souris_BP2_blanc.png" alt="">
+  <!-- Side social icons -->
+  <div class="lines">
+    <span></span>
+    <span></span>
+  </div>
+  <div class="socials flexible">
+    <a href="#"><img src="assets/icon_facebook.png" alt=""></a>
+    <a href="#"><img src="assets/icon_instagram.png" alt=""></a>
+    <a href="#"><img src="assets/icon_twitter.png" alt=""></a>
+    <a href="#"><img src="assets/icon_tik_tok.png" alt=""></a>
+  </div>
+  <!-- Navigation menu -->
+  <nav class="container flexible hidden">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/icon_SaynaXMarvel.png" alt="logo">
+      </a>
+    </div>
+    <ul class="menu flexible centered">
+      <li><a class="subtitle home-link" href="index.html">accueil</a></li>
+      <li><a class="subtitle wakanda-link" href="wakanda.html">wakanda</a></li>
+      <li><a class="subtitle enigme-link" href="enigme.html">enigme</a></li>
+    </ul>
+  </nav>
+  <main class="container flexible">
+    <!-- Hero section -->
+    <section id="hero" class="enigme hidden from-left">
+      <div class="flexible">
+        <h1 class="title-1 enigme">Releve le defi</h1>
+        <h1 class="title-1 enigme">des dora milaje</h1>
+        <div class="p-enigme container flexible">
+          <p>Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde
+            rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la
+            vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des
+            renseignements wakandais. <br><br>
+
+            La réussite de cette évaluation ne dépend pas de la chance mais bel et bien de
+            l’entrainement que tu as suivi jusqu’ici ainsi que de ta détermination. Relève ce défi
+            et montre-nous que tu es capable de porter les valeurs du Black Panther et du
+            Wakanda !</p>
+          <img class="zoom-in" src="assets/3_Page_Enigme/Pantherenigme3.png" alt="panther">
+        </div>
+      </div>
+    </section>
+    <section id="content" class="enigme-box hidden">
+      <div class="container flexible">
+        <div class="paragraph-1 container flexible">
+          <h2 class="subtitle">ENIGME NUMERO <span class="enigme-number"></span></h2>
+          <p class="enigme-state"></p>
+          <p class="enigme-content"></p>
+          <div class="enigme-input flexible">
+            <label for=""></label>
+            <input class="input" type="text" placeholder="Réponse">
+            <button class="btn-2 enigme-btn">ENVOYER</button>
+          </div>
+        </div>
+        <div class="paragraph-2 container flexible">
+          <div>
+            <p class="enigme-sub-hint"></p>
+            <h2 class="enigme-hint flexible"></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container flexible hidden">
+    <div class="footer-illustration container flexible centered from-left">
+      <img src="assets/icon_SaynaXMarvel.png" alt="">
+    </div>
+    <div class="footer-content container flexible from-left">
+      <div class="container flexible" style="padding-inline: 0.5em !important;">
+        <div class="left-side container flexible">
+          <h2 class="footer-subtitle">PAGES</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wakanda.html">Wakanda</a></li>
+            <li><a href="enigme.html">Énigme</a></li>
+          </ul>
+        </div>
+        <div class="right-side container flexible">
+          <h2 class="footer-subtitle">RETROUVEZ NOUS</h2>
+          <ul class="flexible">
+            <li><a href="#"><img src="assets/icon_facebook_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_instagram_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_twitter_footer.png" alt="" srcset=""></a></li>
+            <li><a href="#"><img src="assets/icon_ti_tok_footer.png" alt="" srcset=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-txt flexible centered">
+        <p>2022 Tous droits réservés</p>
+        <ul class="flexible centered">
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Conditions d’utilisation</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="scripts/animation.js" defer></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/underline.js"></script>
+  <script src="scripts/swiper.js"></script>
+  <script src="scripts/cursor.js" defer></script>
+  <script src="scripts/enigme.js"></script>
+</body>
+
+</html>

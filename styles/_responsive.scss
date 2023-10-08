@@ -22,6 +22,14 @@
   background-size: 90% !important;
   }
 
+  main #hero.enigme > div{
+    width: 100% !important;
+  }
+
+  main #hero.enigme :is(h1, h2){
+    text-align: center;
+  }
+
   .swiper-slide {
     flex-direction: column !important;
   }

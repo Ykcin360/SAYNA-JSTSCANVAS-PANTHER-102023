@@ -41,8 +41,12 @@ nav {
   padding-block: 0.5em !important;
 }
 
+nav .menu {
+  column-gap: 3em;
+}
+
 nav .menu a {
-  font-size: 20px !important;
+  font-size: 16px !important;
   color: $secondary-dark;
   transition: opacity ease 1s;
 }
@@ -76,6 +80,18 @@ main #hero{
   justify-content: center;
 }
 
+main #hero.enigme {
+  background: url(../assets/3_Page_Enigme/Pantherenigme1.png) no-repeat;
+  background-position: left;
+  background-size: contain;
+  align-items: end;
+}
+
+main #hero.enigme > div{
+  flex-direction: column;
+  width: 50%;
+}
+
 main #hero.landing{
   background: url(../assets/1_Landing_page/Pantherhome1..png) no-repeat;
   background-position: 100% 50%;
@@ -84,10 +100,6 @@ main #hero.landing{
 
 main #hero.wakanda{
   background: none;
-  // background: url(../assets/2_Wakanda_page/Pantherwakanda1.png) no-repeat;
-  // background-position: center;
-  // background-size: 100%;
-  // min-height: 90vh;
 }
 
 main .wakanda-bg{
@@ -96,12 +108,16 @@ main .wakanda-bg{
   z-index: -1;
 }
 
-main #hero p{
-  max-width: 40%;
+main #hero.enigme h1{
+  max-width: 100%;
+}
+
+main #hero.enigme h1:nth-child(2){
+  font-size: 39px;
 }
 
 main #hero :is(h1, h2) {
-  max-width: 550px;
+  max-width: 600px;
   transition: transform 0.5s ease;
 }
 
@@ -110,11 +126,37 @@ main #hero :is(h1, h2):hover{
   cursor: default;
 }
 
-main #hero h1.wakanda{
-  font-family: $panthera;
+main #hero :is(h1.wakanda, h1.enigme) {
+  font-family: $beyno;
+  font-size: 45px;
 }
+
 main #hero h2.wakanda{
   font-family: $wakanda;
+}
+
+main #hero p{
+  max-width: 40%;
+}
+
+main #hero.enigme .p-enigme{
+  background: url(../assets/3_Page_Enigme/Pantherenigme2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 5em;
+  min-height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #hero.enigme .p-enigme img{
+  width: fit-content;
+}
+
+main #hero.enigme p{
+  max-width: 100%;
+  font-size: 12px;
 }
 
 .swiper {
@@ -249,6 +291,11 @@ main #content > div.wakanda .military-illustration{
   transform: scale(1.8);
   width: 100%;
   min-height: 200px;
+  transition: transform 0.5s ease-out;
+}
+
+main #content > div.wakanda .military-illustration:hover{
+  transform: scale(1.9);
 }
 
 main #content div .aside{
@@ -306,6 +353,58 @@ main .aside .aside-illustration{
   background: url(../assets/1_Landing_page/Pantherhome2.png) no-repeat center;
   width: 100%;
   height: 400px;
+}
+
+main #content.enigme-box .subtitle{
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+main #content.enigme-box .paragraph-1{
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 500px;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-number {
+  color: $secondary-dark;
+  font-size: 20px;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-input{
+  flex-direction: column;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-input .input{
+  border-color: $secondary-dark;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-input .input::placeholder{
+  color: $secondary-dark;
+}
+
+main #content.enigme-box .paragraph-1 .enigme-input .enigme-btn{
+  background-color: $secondary-light;
+  color: $primary-dark;
+  max-width: 100px;
+  border-radius: 25px;
+  align-self: center;
+  border: none;
+  margin-top: 3em;
+}
+
+main #content.enigme-box .paragraph-2{
+  background: url(../assets/3_Page_Enigme/Pantherenigme2.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-grow: 1;
+  flex-basis: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+main #content.enigme-box .subtitle:hover{
+  transform: none !important;
 }
 
 #contact{

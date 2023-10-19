@@ -1,11 +1,11 @@
-batMouse = document.getElementById("wakandaMouse");
-document.onmousemove = batCursorFollow;
+wakandaMouse = document.getElementById("wakandaMouse");
+document.onmousemove = wakandaCursorFollow;
 
-function batCursorFollow(evenement) {
+function wakandaCursorFollow(evenement) {
   var x = evenement.pageX;
   var y = evenement.pageY;
-  batMouse.style.left = x + 20 + "px";
-  batMouse.style.top = y + 15 + "px";
+  wakandaMouse.style.left = x + 20 + "px";
+  wakandaMouse.style.top = y + 15 + "px";
 
-  batMouse.style.transition = "all 0.2s ease";
+  wakandaMouse.style.transition = "all 0.2s ease";
 }
